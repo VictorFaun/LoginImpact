@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Bienvenido {{user.nombre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2 class="ion-margin-start">Usuarios:</h2>
+  <div *ngFor="let user of users; index as i">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ user.nombre+" "+user.apellido_p+" "+user.apellido_m }}</ion-card-title>
+        <ion-card-subtitle>{{ user.correo }}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        
+        <h2>Teléfono: {{ user.telefono }}</h2>
+
+        <br/>
+        
+        <ion-button (click)="openModal(i)">Editar</ion-button>
+        
+        <ion-button (click)="eliminar(i)">Eliminar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="registrar">
+    <ion-button  (click)="openModal(-1)">Registrar</ion-button>
+    
+    <ion-button  (click)="salir()">Salir</ion-button>
+  </div>
+
+</ion-content>

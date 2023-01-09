@@ -1,0 +1,7 @@
+{
+  "name": "LoginImpact",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

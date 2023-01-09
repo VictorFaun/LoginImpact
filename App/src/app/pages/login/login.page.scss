@@ -1,0 +1,25 @@
+.botones{
+    display: flex;
+    justify-content: center;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    padding-top: 20vh;
+    height: 100vh;
+}
+
+.titulo{
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 5vh;
+}
+
+.email{
+    margin-bottom: 2vh;
+}
+
+.password{
+    margin-bottom: 5vh;
+}
