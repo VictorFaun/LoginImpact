@@ -6,3 +6,26 @@ ion-card-title{
     display: flex;
     justify-content: center;
 }
+.home{
+    height: 100vh;
+    background-image: url("../../../assets/img/fondo.jpg") !important;
+    background-size: cover;
+    color: #000;
+}
+
+ion-card{
+    background-color: rgba(0, 0, 0, .5);
+    color: rgb(210, 210, 210) !important;
+}
+ion-card-subtitle{
+    color: rgb(210, 210, 210) !important;
+}
+
+.home .ion-color-dark{
+    --ion-color-base: #222428 !important;
+    --ion-color-contrast: #fff !important;
+}
+
+.home .titulo{
+    font-weight: bold;
+}

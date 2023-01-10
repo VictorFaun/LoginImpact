@@ -22,7 +22,6 @@ export class HomePage implements OnInit {
   
 
   ngOnInit() {
-    console.log("object");
     this.apiService.getAllUsers().subscribe((res:any)=>{
       this.users = res
     })
@@ -33,6 +32,7 @@ export class HomePage implements OnInit {
       const modal = await this.modalCtrl.create({
         component: ModalComponent,
         componentProps:{
+          isCreateUser: false,
           correo: this.users[index].correo,
           contrasena: this.users[index].contraseña,
           nombre: this.users[index].nombre,

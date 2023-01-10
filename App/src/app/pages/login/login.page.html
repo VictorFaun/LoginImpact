@@ -1,8 +1,7 @@
 
 <ion-content>
-
  <div class="login">
-  <div>
+  <div class="login-container">
     <h2 class="ion-text-center titulo">Iniciar Sesion</h2>
     <div class="email">
       <ion-input placeholder="Correo electrónico" type="email" [(ngModel)]="correo"></ion-input>
@@ -10,12 +9,14 @@
     <div class="password">
       <ion-input placeholder="Contraseña" type="password" [(ngModel)]="contrasena"></ion-input>
     </div>
+
+    <div *ngIf="error" class="ion-text-center error">{{message}}</div>
     
     <div class="botones">
       
-      <ion-button (click)="openModal()">Regístrate</ion-button>
+      <ion-button color="dark" (click)="openModal()">Regístrate</ion-button>
           
-      <ion-button (click)="login()">Ingresar</ion-button>
+      <ion-button color="dark" (click)="login()">Ingresar</ion-button>
   
     </div>
   </div>

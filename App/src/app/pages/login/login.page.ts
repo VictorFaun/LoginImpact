@@ -13,6 +13,8 @@ export class LoginPage implements OnInit {
 
   correo: string = "";
   contrasena: string = "";
+  error: boolean = false;
+  message: string = "";
 
 
   constructor(private apiService: ApiService,public router: Router,private modalCtrl: ModalController) { }
@@ -21,6 +23,14 @@ export class LoginPage implements OnInit {
   }
 
   login =()=> {
+    this.error= false
+
+    if(!this.correo){
+      this.error= true
+      this.message="Correo electrónico en blanco"
+      return
+    }
+
     this.apiService.getUserById({"correo":this.correo}).subscribe((res:any)=>{
       if(res.length > 0){
         if(this.contrasena == res[0].contraseña){
@@ -30,10 +40,12 @@ export class LoginPage implements OnInit {
           }
           this.router.navigate(['/home'],extras);
         }else{
-          console.log("Contraseña incorrecta");
+          this.error= true
+          this.message="Contraseña incorrecta"
         }
       }else{
-        console.log("Usuario no existe");
+        this.error= true
+        this.message="Usuario no registrado"
       }
       
     });

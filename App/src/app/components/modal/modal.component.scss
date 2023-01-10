@@ -1,0 +1,24 @@
+.form ion-input{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid var(--ion-text-color, #000);
+    border-radius: 10px;
+    padding-left: 10px !important;
+}
+
+.form .error{
+    color: rgb(174, 10, 10);
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.form .botones{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.form .botones .ion-color-dark{
+    --ion-color-base: #0f48b9 !important;
+    --ion-color-contrast: #fff !important;
+}
